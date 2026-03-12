@@ -1,0 +1,90 @@
+$padding-value: 2px;
+$flag-depth: 25px;
+
+.flag-button {
+  transition: all 0.3s ease;
+  position: relative;
+  border-radius: 5px;
+
+  &-wrapper {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      calc(100% - $flag-depth) 25%,
+      100% 50%,
+      calc(100% - $flag-depth) 75%,
+      100% 100%,
+      0 100%
+    );
+
+    width: fit-content;
+    padding: $padding-value;
+    border-radius: 4px;
+    margin: auto;
+    transition: all 0.3s ease;
+  }
+
+  &-inner {
+    clip-path: polygon(
+      0 0,
+      calc(100% - $padding-value - 2px) 0,
+      // Pull the point back $padding-value to add padding
+      calc(100% - $flag-depth - $padding-value) 25%,
+      calc(100% - $padding-value) 50%,
+      calc(100% - $flag-depth - $padding-value) 75%,
+      // Pull the point back $padding-value to add padding
+      calc(100% - $padding-value - 2px) 100%,
+      0 100%
+    );
+    margin: auto;
+  }
+
+  &-hover-shadow {
+    filter: none;
+    top: 0px;
+    left: 0px;
+
+    &:hover {
+      top: -3px;
+      left: -3px;
+      // TODO: somehow make shadow color variable
+      filter: drop-shadow(6px 6px #000);
+    }
+  }
+
+  &-hover-shadow-white {
+    filter: none;
+    top: 0px;
+    left: 0px;
+
+    &:hover {
+      top: -3px;
+      left: -3px;
+      // TODO: somehow make shadow color variable
+      filter: drop-shadow(6px 6px #fff);
+    }
+  }
+
+  &-shadow {
+    filter: drop-shadow(6px 6px #000);
+    top: 0px;
+    left: 0px;
+
+    &:hover {
+      top: 3px;
+      left: 3px;
+      filter: none;
+    }
+  }
+  &-shadow-white {
+    filter: drop-shadow(6px 6px #fff);
+    top: 0px;
+    left: 0px;
+
+    &:hover {
+      top: 3px;
+      left: 3px;
+      filter: none;
+    }
+  }
+}

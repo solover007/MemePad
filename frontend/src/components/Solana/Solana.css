@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+.wallet-adapter-button {
+    border: none;
+    color: black !important;
+    background: transparent !important;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-family: "Bungee", sans-serif !important;
+    font-weight: 900;
+    align-items: center;
+    text-transform: uppercase;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 30px 4px 30px !important;
+    border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+    .wallet-adapter-button {
+        color: black !important;
+        text-shadow: 0 1px 1px #fff !important;
+        padding: 20px 8px 15px 15px !important;
+        font-weight: 900;
+
+    }
+}
+
+
+.wallet-adapter-dropdown-list{
+    top: -350% !important;
+}
+
+.wallet-adapter-button-trigger {
+    background: transparent !important;
+}
+
+.wallet-adapter-modal-title {
+    font-weight: 500;
+    font-size: 24px;
+    font-family: "Bungee", sans-serif !important;
+    line-height: 36px;
+    margin: 0;
+    padding: 64px 48px 48px 48px;
+    text-align: center;
+    color: #685AC9 !important;
+}
+
+.wallet-adapter-modal-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5000;
+    max-width: 400px;
+    border-radius: 10px;
+    background: #fff !important;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    font-family: 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    flex: 1;
+   
+}
+
+
+.wallet-adapter-modal-list-more {
+    cursor: pointer;
+    border: none;
+    padding: 12px 24px 24px 12px;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #685AC9 !important;
+}
+
+
+.wallet-adapter-modal-button-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: 12px;
+    cursor: pointer;
+    background: #685AC9 !important;
+    border: none;
+    border-radius: 50%;
+}
+
+.wallet-adapter-modal-button-close:focus-visible {
+    outline-color: white !important;
+}
+
+
+.wallet-adapter-modal-button-close svg {
+    fill: #fff !important;
+    transition: fill 200ms ease 0s;
+}
+
+.wallet-adapter-modal-button-close:hover svg {
+    fill: #fff !important;
+}

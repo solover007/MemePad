@@ -1,0 +1,17 @@
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+create_pool = "GJCJt2y1M7ah6VpAjUAJvKBtdD3wq6nzw81geD9q7EZq"
+[programs.devnet]
+create_pool = "GJCJt2y1M7ah6VpAjUAJvKBtdD3wq6nzw81geD9q7EZq"
+[programs.mainnet]
+create_pool = "GJCJt2y1M7ah6VpAjUAJvKBtdD3wq6nzw81geD9q7EZq"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"

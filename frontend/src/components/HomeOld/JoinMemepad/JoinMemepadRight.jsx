@@ -1,0 +1,76 @@
+import goatImg from "@/public/images/goat.png";
+// import { copyTextToClipboard } from "@/lib/utils";
+// import { toast } from "react-toastify";
+// import { PRE_SALE_ADDRESS } from "@/lib/utils/constants";
+// import PayNowButton from "../../Countdown/SendMoney/PayNowButton";
+import Exclude from "@/public/icons/JoinMemepadIcons/Exclude";
+// import PayNowModal from "../../Countdown/SendMoney/PayNowModal/PayNowModal";
+import JoinNowButton from "../../Shared/JoinNowButton";
+
+const JoinMemepadRight = () => {
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+  // const copyAddress = async () => {
+  //   const res = await copyTextToClipboard(PRE_SALE_ADDRESS);
+  //   if (res) {
+  //     return toast.success("Copied");
+  //   }
+  // };
+  return (
+    <div className="relative flex-1 rounded-tr-3xl rounded-br-3xl bg-[#7A64F4]">
+      <div className="flex flex-col items-center justify-center  gap-6 py-28 mb-20">
+        <img className="w-64" src={goatImg} alt="goat image" />
+        {/* component heading */}
+        <h1 className="font-lato text-stroke-1-white text-white text-[40px] font-bold">
+          A premier launchpad on <br /> Solana for{" "}
+          <span className="bg-pink rounded-[30px] px-2 pb-2">memecoins</span>
+        </h1>
+
+        {/* copy wallet address */}
+        {/* <div
+        className={`cursor-pointer flex gap-2 justify-between flex-row py-1 md:py-2 px-2 md:px-4 items-center border-2 border-solid border-b-[12px] md:border-b-[12px] border-black bg-white z-50 w-96`}
+        onClick={copyAddress}
+      >
+        <p className="font-lato font-bold whitespace-normal text-black text-base truncate">
+          {PRE_SALE_ADDRESS}
+        </p>
+
+        <div className="h-8 w-8 ml-1 md:ml-0">
+          <svg
+            height="100%"
+            viewBox="0 0 43 41"
+            className="w-5 md:w-full"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M34.1373 36.3432H15.9341C14.7063 36.3432 13.5381 35.873 12.684 35.0504C11.8316 34.2294 11.362 33.1263 11.362 31.9866V14.4539C11.362 13.3143 11.8316 12.2112 12.684 11.3902C13.5381 10.5676 14.7063 10.0973 15.9341 10.0973H34.1373C35.3651 10.0973 36.5333 10.5676 37.3874 11.3902C38.2398 12.2112 38.7094 13.3143 38.7094 14.4539V31.9866C38.7094 33.1263 38.2398 34.2294 37.3874 35.0504C36.5333 35.873 35.3651 36.3432 34.1373 36.3432Z"
+              fill="white"
+              stroke="black"
+              strokeWidth="2.55797"
+            />
+            <mask id="path-2-inside-1_54_2799" fill="white">
+              <path d="M13.9829 6.31366H33.1516C32.7471 5.2157 31.9997 4.2652 31.0121 3.59255C30.0245 2.9199 28.845 2.55805 27.6354 2.55664H9.43211C7.88031 2.55664 6.39207 3.15038 5.29479 4.20725C4.1975 5.26412 3.58105 6.69753 3.58105 8.19217V25.7249C3.58252 26.89 3.9582 28.026 4.65658 28.9773C5.35496 29.9285 6.34181 30.6483 7.48176 31.038V12.5754C7.48176 10.9147 8.1667 9.32197 9.38591 8.14767C10.6051 6.97337 12.2587 6.31366 13.9829 6.31366Z" />
+            </mask>
+            <path
+              d="M13.9829 6.31366H33.1516C32.7471 5.2157 31.9997 4.2652 31.0121 3.59255C30.0245 2.9199 28.845 2.55805 27.6354 2.55664H9.43211C7.88031 2.55664 6.39207 3.15038 5.29479 4.20725C4.1975 5.26412 3.58105 6.69753 3.58105 8.19217V25.7249C3.58252 26.89 3.9582 28.026 4.65658 28.9773C5.35496 29.9285 6.34181 30.6483 7.48176 31.038V12.5754C7.48176 10.9147 8.1667 9.32197 9.38591 8.14767C10.6051 6.97337 12.2587 6.31366 13.9829 6.31366Z"
+              fill="white"
+            />
+            <path
+              d="M13.9829 6.31366V0.345061V6.31366ZM33.1516 6.31366V12.2823H41.7116L38.7522 4.25015L33.1516 6.31366ZM27.6354 2.55664L27.6423 -3.41196H27.6354V2.55664ZM9.43211 2.55664V-3.41196V2.55664ZM3.58105 8.19217H-2.38754H3.58105ZM3.58105 25.7249H-2.38755L-2.38754 25.7324L3.58105 25.7249ZM7.48176 31.038L5.55131 36.6858L13.4504 39.3857V31.038H7.48176ZM13.9829 12.2823H33.1516V0.345061H13.9829V12.2823ZM38.7522 4.25015C37.9082 1.95943 36.3638 0.0160303 34.372 -1.34056L27.6523 8.52566C27.6357 8.51437 27.586 8.47198 27.5511 8.37717L38.7522 4.25015ZM34.372 -1.34056C32.3829 -2.69531 30.0324 -3.40918 27.6423 -3.41195L27.6284 8.52524C27.6408 8.52525 27.6505 8.52717 27.6565 8.529C27.6624 8.53083 27.6605 8.53125 27.6523 8.52566L34.372 -1.34056ZM27.6354 -3.41196H9.43211V8.52524H27.6354V-3.41196ZM9.43211 -3.41196C6.36811 -3.41196 3.3866 -2.24173 1.15427 -0.09162L9.43531 8.50612C9.41478 8.52589 9.4022 8.53032 9.4047 8.52932C9.40559 8.52896 9.40865 8.52786 9.4137 8.52689C9.41862 8.52594 9.42479 8.52524 9.43211 8.52524V-3.41196ZM1.15427 -0.09162C-1.08568 2.06582 -2.38754 5.04074 -2.38754 8.19217L9.54965 8.19217C9.54965 8.35433 9.48069 8.46241 9.43531 8.50612L1.15427 -0.09162ZM-2.38754 8.19217V25.7249H9.54965V8.19217H-2.38754ZM-2.38754 25.7324C-2.38447 28.183 -1.59298 30.5503 -0.154599 32.5095L9.46776 25.445C9.50939 25.5017 9.5495 25.5969 9.54965 25.7174L-2.38754 25.7324ZM-0.154599 32.5095C1.28129 34.4653 3.28326 35.9105 5.55131 36.6858L9.4122 25.3902C9.40036 25.3861 9.42863 25.3917 9.46776 25.445L-0.154599 32.5095ZM13.4504 31.038V12.5754H1.51316V31.038H13.4504ZM13.4504 12.5754C13.4504 12.5685 13.4514 12.5565 13.4597 12.5371C13.4682 12.5174 13.4867 12.4848 13.5264 12.4465L5.24539 3.8488C2.88351 6.12367 1.51316 9.25786 1.51316 12.5754H13.4504ZM13.5264 12.4465C13.6106 12.3655 13.7709 12.2823 13.9829 12.2823V0.345061C10.7465 0.345061 7.59964 1.58126 5.24539 3.8488L13.5264 12.4465Z"
+              fill="black"
+              mask="url(#path-2-inside-1_54_2799)"
+            />
+          </svg>
+        </div>
+      </div> */}
+
+        <div className="mt-6 mr-36">
+          <JoinNowButton text="JoIN" design="two" color="#F68BFF"/>
+        </div>
+      </div>
+
+      <Exclude />
+    </div>
+  );
+};
+export default JoinMemepadRight;

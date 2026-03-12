@@ -1,0 +1,38 @@
+.btn-shadow {
+  box-shadow: black 5px 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.shadow {
+  box-shadow: #271a5d 10px 10px;
+}
+
+.btn-shadow:hover {
+  box-shadow: none;
+}
+
+.faq-box:nth-last-child(1) {
+  border: none;
+}
+
+.label-name {
+  color: #000 !important;
+  font-size: medium;
+}
+
+.custom-tooltip {
+  background-color: white;
+  width: 150px;
+  border: 1px solid gray;
+  padding: 1rem;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.carousel-status {
+  display: none !important;
+}
+
+.dot {
+  background-color: #8b5cf6 !important;
+}

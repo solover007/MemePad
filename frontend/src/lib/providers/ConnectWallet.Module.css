@@ -1,0 +1,15 @@
+.connect-wallet-modal {
+  border: 1px solid rgb(182, 180, 180) !important;
+}
+
+.connect-wallet-modal:hover {
+  border: 1px solid rgb(148, 72, 225) !important;
+}
+
+.connect-wallet-modal:hover .wallet-name {
+  font-weight: 700;
+}
+
+.connect-wallet-modal:hover .wallet-icon {
+  scale: 1.2;
+}
