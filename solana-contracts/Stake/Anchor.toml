@@ -1,0 +1,24 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.localnet]
+staking = "GiMfRW9sVJP9TL7kUB22APwoSf5XNk1VmvYW9eZtqP2S"
+
+[programs.devnet]
+staking = "GiMfRW9sVJP9TL7kUB22APwoSf5XNk1VmvYW9eZtqP2S"
+
+[programs.mainnet]
+staking = "GiMfRW9sVJP9TL7kUB22APwoSf5XNk1VmvYW9eZtqP2S"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "Localnet"
+wallet = "/root/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

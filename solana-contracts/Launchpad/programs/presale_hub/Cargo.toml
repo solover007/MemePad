@@ -1,0 +1,32 @@
+[package]
+name = "presale_hub"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "presale_hub"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-spl = "0.28.0"
+anchor-lang = { version = "0.28.0", features = ["init-if-needed"]}
+dlmm = { path = "./libs/lb_clmm", package = "lb_clmm", features = [
+    "cpi",
+]}
+solana-program = "1.16.0"
+[dev-dependencies]
+solana-program-test = "1.16.0"
+solana-sdk = "1.16.0"
+bytemuck = { version = "1.13.1", features = ["derive", "min_const_generics"] }
+assert_matches = "1.5.0"
+solana-client = "1.16.0"
+solana-account-decoder = "1.16.0"
+bincode = "1.3.3"

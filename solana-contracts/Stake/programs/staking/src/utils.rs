@@ -1,0 +1,54 @@
+use anchor_lang::prelude::*;
+use crate::{constants::*, states::*};
+
+pub fn stake_fee(global_state: &GlobalState, amount: u64) -> Result<u64> {
+    let res = (amount as u128) * (global_state.stake_fee as u128) / (DENOMINATOR as u128);
+    Ok(res as u64)
+}
+
+pub fn unstake_fee(global_state: &GlobalState, amount: u64) -> Result<u64> {
+    let res = (amount as u128) * (global_state.unstake_fee as u128) / (DENOMINATOR as u128);
+    Ok(res as u64)
+}
+
+pub fn claim_fee(global_state: &GlobalState, amount: u64) -> Result<u64> {
+    let res = (amount as u128) * (global_state.claim_fee as u128) / (DENOMINATOR as u128);
+    Ok(res as u64)
+}
+
+pub fn ref_fee(global_state: &GlobalState, amount: u64) -> Result<u64> {
+    let res = (amount as u128) * (global_state.ref_fee as u128) / (DENOMINATOR as u128);
+    Ok(res as u64)
+}
+
+pub fn calc_rewards(user_state: &UserState, token_index: u8, card_no: u8) -> Result<u64> {
+    let mut res = (user_state.stake_amount as u128) * (APYS[token_index as usize][card_no as usize] as u128) / (DENOMINATOR as u128);
+    
+    let cur_timestamp = Clock::get()?.unix_timestamp as u64;
+    let reward_time: u64;
+    if user_state.claim_time == 0 {
+        reward_time = user_state.stake_time;
+    } else {
+        reward_time = user_state.claim_time;
+    }
+     
+    let stake_period = cur_timestamp
+        .checked_sub(reward_time)
+        .unwrap();
+    res = res.checked_mul(stake_period as u128)
+        .unwrap()
+        .checked_div(YEAR_1 as u128)
+        .unwrap();
+
+    Ok(res as u64)
+}
+
+// Function to find the index of Pubkey in an Pubkey array
+pub fn find_index(array: &[Pubkey], target: Pubkey) -> Option<usize> {
+    for (index, &item) in array.iter().enumerate() {
+        if item == target {
+            return Some(index);
+        }
+    }
+    None
+}
